@@ -113,6 +113,7 @@ def spendPoints():
                 global_dict = globals()
                 global_dict['DB'] = DB
                 return jsonify(payer_list)
+        # if there is not enough points to spend, then return the same page with feedback
         if points_to_spend > 0:
             feedback = f'Not enough points to spend {want_to_spend} points'
             return render_template('spend.html', feedback=feedback)
