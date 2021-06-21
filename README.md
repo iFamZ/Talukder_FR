@@ -9,6 +9,7 @@ Steps to Run the Service:
 3. Run the web service
 - python3 pythonWebService_tested.py
 4. A local address will be displayed in your terminal - go to that address to interact with the web service
+5. Append the routes from below at the end of the local address to utilize them
 
 Functions:
 1. getPointBalance() --> route: '/getPointsBalance'

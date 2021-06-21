@@ -103,6 +103,7 @@ def spendPoints():
             DB[i]['points'] -= spend_points
             payer_dict[DB_item['payer']] += spend_points
             points_to_spend -= spend_points
+            # create the payer list -- list of dict items of which payer paid how many points
             if points_to_spend == 0:
                 for i in payer_dict:
                     temp_dict = {'payer':i, 'points':-1*payer_dict[i]}
@@ -122,9 +123,9 @@ def sort_DB(DB = DB):
     global_dict['DB'] = sorted_DB
     return sorted_DB
 
-@app.route('/getTransactions', methods=['GET'])
-def getDB():
-    return jsonify(DB)
+# @app.route('/getTransactions', methods=['GET'])
+# def getDB():
+#     return jsonify(DB)
 
 
 if(__name__=='__main__'):
