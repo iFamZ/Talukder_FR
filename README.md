@@ -10,6 +10,17 @@ Steps to Run the Service:
 - python3 pythonWebService_tested.py
 4. A local address will be displayed in your terminal - go to that address to interact with the web service
 
+Functions:
+1. getPointBalance() --> route: '/getPointsBalance'
+- returns the point balance of each payer in the database
+2. addTransaction() --> route: '/addTransaction'
+- adds individual transaction to the database using the templates/form.html for input data
+3. spendPoints() --> route: '/spendPoints'
+- spends points utilizing the logic stated in the problem statement.
+- the input is taken in using the templates/spend.html
+4. getTransactions() --> route: '/getTransactions'
+- debugging method used to get a copy of the database
+- commented out after test phase
 
 
 One conscious decision made in this project is not to delete payers with 0 points in the database.

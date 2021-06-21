@@ -73,7 +73,7 @@ def addTransactions():
 
     return render_template('form.html')
 
-# spend point taken in with form
+# spend point taken in with spend form
 @app.route('/spendPoints', methods=['POST','GET'])
 def spendPoints():
     if request.method == 'POST':
@@ -88,12 +88,9 @@ def spendPoints():
 
         # sort the DB by timestamp
         # create a dict with key being payer name to ensure that their points are totaled correctly
-        # update the DB after subtractions are made
-        # create a list of dicts of records which are to be removed
         sorted_DB = sort_DB()
-        # update the database and subtract points
+
         payer_dict = OrderedDict() # holds the payer and the amount of points they spend in an ordered dict
-        DB_remove_list = [] # holds the index of items to be removed from global DB
         payer_list = []
         for i in range(len(sorted_DB)):
             DB_item = sorted_DB[i]
