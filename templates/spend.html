@@ -1,0 +1,7 @@
+<form action="/spendPoints" method = "POST">
+    <p>points <input type = "number" name = "points" /></p>
+    <p><input type = "submit" value = "Spend!" /></p>
+    {% if feedback %}
+    <p class='text-danger float right'>{{feedback}}</p>
+    {% endif %}
+</form>

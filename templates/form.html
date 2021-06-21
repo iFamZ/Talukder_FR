@@ -1,0 +1,9 @@
+<form action="/addTransaction" method = "POST">
+    <p>payer <input type = "text" name = "payer" /></p>
+    <p>points <input type = "number" name = "points" /></p>
+    <p>timestamp <input type = "datetime-local" name = "timestamp" /></p>
+    <p><input type = "submit" value = "Add Transaction" /></p>
+    {% if feedback %}
+    <p class='text-danger float right'>{{feedback}}</p>
+    {% endif %}
+</form>
